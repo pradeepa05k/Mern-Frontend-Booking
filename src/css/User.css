@@ -1,0 +1,56 @@
+.container{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 100px;   
+    background-color: white;
+    border-radius: 20%;
+}
+h1{
+    display: block;
+}
+img{
+    border-radius: 50%;
+}
+.left{
+    float: left;
+    width: 90%;
+    margin-left: 0;
+    padding: 10%;
+    padding-top: 0%;
+    background-color: white;
+} 
+ 
+.ip input{
+    padding: 10px;
+    width: 70%;
+    border-radius: 25px;
+    border: 1px solid white;
+}
+.left button{
+    margin: 15px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgb(86, 226, 245);
+    border: 1px solid white;
+}
+
+.ip input{
+    padding: 10px;
+    width: 220px;
+    border-radius: 25px;
+    border: 1px solid white;
+}
+button{
+    margin: 15px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgb(86, 226, 245);
+    border: 1px solid white;
+} 

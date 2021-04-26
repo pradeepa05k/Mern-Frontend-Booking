@@ -1,0 +1,21 @@
+.content{
+    width: 750px;
+    height: 40%;
+    padding: 30px;
+    margin-left: 25%;
+    border: 1px solid rgb(124, 120, 120);
+}
+input[placeholder]{
+    padding-left: 15px;
+}
+h1{
+    text-align: center;    
+}
+button{
+    width: 340px;
+    height: 40px;
+    border: white;
+    color: white;
+    background-color: green;
+    margin-left: 20%; 
+}
