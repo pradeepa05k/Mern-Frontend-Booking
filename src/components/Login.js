@@ -30,7 +30,6 @@ class AdminLogin extends Component {
             email : this.state.email,
             password : this.state.password
         }
-        // console.log(registered);
         sessionStorage.setItem('loginDetails',registered);
         if(this.state.email==="admin@gmail.com" && this.state.password==="admin111")
         {

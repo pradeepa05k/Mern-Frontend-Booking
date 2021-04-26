@@ -65,7 +65,7 @@ class PassengerDetails extends React.Component {
         })
     }
     componentDidMount() {
-        axios.get(`http://localhost:4000/seat/getSeats`)
+        axios.get(`http://book-your-ticket.herokuapp.com/seat/getSeats`)
           .then(res => {
             const seat = res.data;
             console.log(res.data);
@@ -87,7 +87,7 @@ class PassengerDetails extends React.Component {
             seatId : this.props.match.params.id
         }
         console.log(registered);
-        axios.post("http://localhost:4000/bookSeat", registered)
+        axios.post("http://book-your-ticket.herokuapp.com/bookSeat", registered)
         .then((response) => {
             if(response) {
                 alert("Booking Successfull!!");
@@ -97,8 +97,6 @@ class PassengerDetails extends React.Component {
                 alert("Registered Failed");
             }
         })
-
-        // alert("You are submitting " + this.state.name);
     }
 
         render(){

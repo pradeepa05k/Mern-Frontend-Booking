@@ -3,10 +3,7 @@ const UserNav = () => {
     return(
         <div className="back">
             <ul>
-                {/* <li><a href="/seat">View Seats</a></li> */}
                 <li><a href="/open">Open Seats</a></li>
-                {/* <li><a href="/close">Closed Seats</a></li> */}
-                {/* <li><a href="/bookedseats">Booked Seats</a></li> */}
                 <li><a href="/seatlist">Book Seat</a></li>
                 <li><a href="/login">Logout</a></li>
             </ul>        

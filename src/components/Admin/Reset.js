@@ -20,7 +20,7 @@ class Reset extends Component{
         const result = {
             seatStatus : this.state.seatStatus
         }
-        axios.post("http://localhost:4000/seat/reset", result)
+        axios.post("http://book-your-ticket.herokuapp.com/seat/reset", result)
         .then((response) => {
             if(response) {
                 alert("Reset Successfully!!!");
