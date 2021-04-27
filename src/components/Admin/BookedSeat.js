@@ -8,7 +8,7 @@ export default function BookedSeat() {
 
 
     useEffect(() => {
-        axios.get(`http://book-your-ticket.herokuapp.com/passengerDetails`)
+        axios.get(`https://book-your-ticket.herokuapp.com/passengerDetails`)
         .then((response) => {
             console.log(response.data);
             setUser(response.data);

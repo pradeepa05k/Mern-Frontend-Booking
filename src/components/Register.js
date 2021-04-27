@@ -48,7 +48,7 @@ class user extends Component{
             password : this.state.password
         }
         console.log(registered);
-        axios.post("http://book-your-ticket.herokuapp.com/user/insertUser", registered)
+        axios.post("https://book-your-ticket.herokuapp.com/user/insertUser", registered)
         .then((response) => {
             if(response) {
                 alert("Registered Successfully!!!");

@@ -8,7 +8,6 @@ import './css/User.css';
 import './css/PassengerDetails.css';
 import AdminLogin from "./components/Login";
 import SeatList from './components/Seats/SeatList';
-// import Seat from "../draft/Seat"
 import Reset from './components/Admin/Reset';
 import AdminNav from "./components/Admin/AdminNav";
 import Open from "./components/Admin/Open";
@@ -20,8 +19,7 @@ class App extends Component{
         return(
             <Router>
                 <Switch>
-                    <Route path="/seatlist" component={SeatList}></Route>   
-                    {/* <Route path="/seat" component={Seat}></Route> */}
+                    <Route path="/seatlist" component={SeatList}></Route>
                     <Route path="/reset" component={Reset}></Route>
                     <Route path="/register" component={user}></Route>
                     <Route path="/open" component={Open}></Route>

@@ -11,7 +11,7 @@ class Close extends Component{
         
     }
     componentDidMount() {
-        axios.get(`http://book-your-ticket.herokuapp.com/seat/close`)
+        axios.get(`https://book-your-ticket.herokuapp.com/seat/close`)
           .then(res => {
             const seat = res.data;
             console.log(res.data);

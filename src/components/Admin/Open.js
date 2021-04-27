@@ -12,7 +12,7 @@ class Open extends Component{
         
     }
     componentDidMount() {
-        axios.get(`http://book-your-ticket.herokuapp.com/seat/open`)
+        axios.get(`https://book-your-ticket.herokuapp.com/seat/open`)
           .then(res => {
             const seat = res.data;
             console.log(res.data);
