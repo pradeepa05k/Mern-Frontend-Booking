@@ -46,8 +46,8 @@ class AdminLogin extends Component {
             <div className="mw5 mw7-ns center bg-light-gray pa3 ph5-ns">
                 <h1>Login</h1>
                 <form onSubmit={this.submit} method="post">
-                    <input type="email" placeholder="Email" value={this.email} onChange={this.changeEmail}  size="60" style={{height: '30px'}}/><br/><br/> 
-                    <input type="password" placeholder="Password" value={this.password} onChange={this.changePassword}  size="60" style={{height: '30px'}}/><br/><br/>
+                    <input type="email" placeholder="Email" required value={this.email} onChange={this.changeEmail}  size="60" style={{height: '30px'}}/><br/><br/> 
+                    <input type="password" placeholder="Password" required value={this.password} onChange={this.changePassword}  size="60" style={{height: '30px'}}/><br/><br/>
                     <button type="submit">Login</button><br/><br/>
                     <p>New User?<a href="/register">Sign Up</a> </p>
                 </form>                    
