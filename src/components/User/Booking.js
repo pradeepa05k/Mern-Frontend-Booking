@@ -68,13 +68,10 @@ class PassengerDetails extends React.Component {
         axios.get(`https://book-your-ticket.herokuapp.com/seat/getSeats`)
           .then(res => {
             const seat = res.data;
-            console.log(res.data);
-            this.setState({ seats:seat  });
-            console.log(this.state.seats)
+            this.setState({ seats:seat });
         })
     } 
     submit(event){
-        console.log("submiting");
         event.preventDefault(); 
         const registered = {
             name : this.state.name,
@@ -99,23 +96,23 @@ class PassengerDetails extends React.Component {
         })
     }
 
-        render(){
-                return (
-                <div className="content">
+    render(){
+        return (
+            <div className="content">
                 <h1>Booking</h1>
                 <form onSubmit={this.submit} method="post">
-                    <input type="text" placeholder="Passenger Name" value={this.name} onChange={this.changePassengerName} size="80" style={{height: '30px'}}/><br/><br/>
-                    <input type="tel" placeholder="Mobile Number"  value={this.mobile} onChange={this.changeMobileNumber}size="80" style={{height: '30px'}}/><br/><br/>
-                    <input type="text" placeholder="Age" size="80" value={this.age} onChange={this.changeAge}style={{height: '30px'}}/><br/><br/>
-                    <input type="text" placeholder="Gender" size="80" value={this.gender} onChange={this.changeGender}style={{height: '30px'}}/><br/><br/> 
-                    <input type="text" placeholder="Travel From"value={this.source} onChange={this.changeFrom} size="80" style={{height: '30px'}}/><br/><br/>
-                    <input type="text" placeholder="Travel To" value={this.destination} onChange={this.changeTo}size="80" style={{height: '30px'}}/><br/><br/> 
+                    <input type="text" placeholder="Passenger Name" required value={this.name} onChange={this.changePassengerName} size="80" style={{height: '30px'}}/><br/><br/>
+                    <input type="tel" placeholder="Mobile Number" required  value={this.mobile} onChange={this.changeMobileNumber}size="80" style={{height: '30px'}}/><br/><br/>
+                    <input type="text" placeholder="Age" size="80" required value={this.age} onChange={this.changeAge}style={{height: '30px'}}/><br/><br/>
+                    <input type="text" placeholder="Gender" size="80" required value={this.gender} onChange={this.changeGender}style={{height: '30px'}}/><br/><br/> 
+                    <input type="text" placeholder="Travel From" required value={this.source} onChange={this.changeFrom} size="80" style={{height: '30px'}}/><br/><br/>
+                    <input type="text" placeholder="Travel To" required value={this.destination} onChange={this.changeTo}size="80" style={{height: '30px'}}/><br/><br/> 
                     <label htmlFor="tdate">Travel Date :  </label>
-                    <input id="tdate" type="date" size="80" value={this.travelDate} onChange={this.changeTravelDate} style={{height: '30px'}}/><br/><br/>
-                    <button type="submit" >Book My Ticket</button>
+                    <input id="tdate" type="date" size="80" required value={this.travelDate} onChange={this.changeTravelDate} style={{height: '30px'}}/><br/><br/>
+                    <button type="submit"><a href="/payment">Book Seat</a></button>
                 </form>
-                </div>
-                );
-}
+            </div>
+        );
+    }
 }
 export default PassengerDetails;

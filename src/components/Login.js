@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import UserNav from './User/UserNav';
 import AdminNav from './Admin/AdminNav';
 
@@ -31,19 +32,36 @@ class AdminLogin extends Component {
             password : this.state.password
         }
         sessionStorage.setItem('loginDetails',registered);
-        if(this.state.email==="admin@gmail.com" && this.state.password==="admin111")
-        {
-            <AdminNav/>        
-            window.location = '/adminNav';
-        }
-        else{            
-            <UserNav/>
-            window.location = '/userNav';
-        }
+        axios.post("http://localhost:4000/login", registered)
+        .then((response) => {
+            if(response ) {
+                if(response.data != "Invalid email or password"){
+                    console.log(response);
+                    if(this.state.email==="admin@gmail.com" && this.state.password==="admin111")
+                    {
+                        alert("You are Logged in as Admin!!",response.data);
+                        <AdminNav/>        
+                        window.location = '/adminNav';
+                    }
+                    else{
+                        alert("Login Successfull!!",response.data);
+                        <UserNav/>
+                        window.location = '/userNav';
+                    }
+                } 
+                else{
+                    alert("Invalid Email or Password");
+                    window.location = '/login';
+                }
+            }
+            else{
+                alert("Login Failed");
+            }
+        })
     }
     render(){
         return (
-            <div className="mw5 mw7-ns center bg-light-gray pa3 ph5-ns">
+            <div className="mw5 mt5 mw7-ns center bg-light-gray pa3 ph5-ns">
                 <h1>Login</h1>
                 <form onSubmit={this.submit} method="post">
                     <input type="email" placeholder="Email" required value={this.email} onChange={this.changeEmail}  size="60" style={{height: '30px'}}/><br/><br/> 

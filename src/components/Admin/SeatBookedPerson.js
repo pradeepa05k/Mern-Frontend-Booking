@@ -1,29 +1,29 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useParams } from "react-router";
 
-export default function BookedSeat() {
+export default function SeatBookedPerson() {
     const [user, setUser] = useState([]);
-    const [Loading, setLoading] = useState(false);
+    let {id} = useParams();
 
 
     useEffect(() => {
-        axios.get(`https://book-your-ticket.herokuapp.com/passengerDetails`)
+        console.log("Coming");
+        axios.get(`http://localhost:4000/bookingDetail/${id}`)
         .then((response) => {
             console.log(response.data);
             setUser(response.data);
-            setLoading(true);
         })
     },[])
 
-    if(Loading){
-        return (
-            <div>
-                <h3 style={{marginLeft :'40%', marginBottom : '50px'}}>Booked By</h3>
-                {
+    return (
+        <div>
+            {
                 user.map((value) => {
                     return(
                         <div className="out">
+                            <h3 style={{marginLeft :'80px', marginBottom : '50px'}}>Booked By</h3>
                             <div className="row">
                                 <h6 className="col">Name</h6>
                                 <p className="col">{value.name} </p>
@@ -48,13 +48,7 @@ export default function BookedSeat() {
                     );                        
                 })
             }
-            </div>              
-        );
-    }
-    else{
-        return(
-            <div></div>
-        )
-    }  
+        </div>                                              
+    );
 }
 

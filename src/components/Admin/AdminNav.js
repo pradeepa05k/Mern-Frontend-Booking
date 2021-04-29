@@ -3,6 +3,7 @@ const AdminNav = () => {
     return(
         <div className="adm">            
             <ul>
+                <li><a href="/seatList">View Seats</a></li>
                 <li><a href="/open">Open Seat</a></li>
                 <li><a href="/close">Closed Seat</a></li>
                 <li><a href="/reset">Reset</a></li>

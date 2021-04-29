@@ -6,7 +6,7 @@ export default function SeatList() {
     const [Loading, setLoading] = useState(false);
 
     useEffect(() => {
-        axios.get(`https://book-your-ticket.herokuapp.com/seat/getSeats`)
+        axios.get(`http://book-your-ticket.herokuapp.com/seat/getSeats`)
         .then((response) => {
             console.log(response.data);
             const s=setSeat(response.data);

@@ -19,22 +19,17 @@ class Close extends Component{
           })
     }
     render() {
-        return (        
-            this.state.seats.map((object) => {
-                return(
-                <div className="center">
-                    <table>
-                    <tbody>                        
-                        <tr>
-                            <td className="f6 link dim ph3 pv2 mb2 dib white bg-dark-pink">{object.seatNo}</td>
-                            <td className="f6 link dim ph3 pv2 mb2 dib white bg-dark-green">{object.seatStatus}</td>                            
-                            <td className="f6 link dim ph3 pv2 mb2 dib white bg-dark-green">{object.seatDescription}</td>
-                        </tr>
-                    </tbody>
-                    </table>
-                </div>
-            );
-            })            
+        return (   
+            <div className="bg-light-grey dib br3 ma2 pa3 bw2 shadow-5" style={{width: "300px",marginTop:"5%", marginLeft: "35%",border: "1px solid #ced4da"}}>
+                <h2>Closed Seats</h2>
+                {
+                    this.state.seats.map((value) => {
+                        return(
+                            <button className="bg-red dib ma2 pa3" disabled style={{ padding: "5px", width: "50px"}}><a href={`/bookedPassenger/${value._id}`}>{value.seatNo}</a></button>
+                        );
+                    })
+                }        
+            </div>     
         ); 
     }
 }

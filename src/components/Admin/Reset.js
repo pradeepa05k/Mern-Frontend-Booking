@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Reset extends Component{
     constructor(){
@@ -35,10 +36,18 @@ class Reset extends Component{
     render(){
         return(
             <div>
-                <h1>Reset Page</h1>
-                <h3>Reset to </h3>
-                <input placeholder="open/close" onChange={this.changeReset} style={{height: '30px'}}></input><br/><br/>
-                <button onClick={this.submit}>Reset</button>
+                <h1>Reset Tickets</h1>
+                <form className="form-row align-items-center">
+                    <div className="center">
+                        <label className="my-1 mr-2" for="SelectPref">Reset</label><br/>
+                        <select className="custom-select my-1 sm-3" id="SelectPref">
+                            <option selected>Choose...</option>
+                            <option value="1">open</option>
+                            <option value="2">close</option>
+                        </select><br/>
+                        <button type="reset" className="btn btn-success">Reset</button>
+                    </div>
+                </form>
             </div>
         );
     }
