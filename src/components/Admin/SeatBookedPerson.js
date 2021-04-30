@@ -17,7 +17,7 @@ export default function SeatBookedPerson(props) {
             })
         };
         fetch();
-    },[props])
+    },[props,user])
 
     return (
         <div>
