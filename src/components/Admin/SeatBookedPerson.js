@@ -10,7 +10,8 @@ export default function SeatBookedPerson(props) {
 
     useEffect(() => {
         const fetch = () => {
-            axios.get(`https://book-your-ticket.herokuapp.com/bookingDetail/${id}`)
+            const idValue = id ? {id} : {}
+            axios.get(`https://book-your-ticket.herokuapp.com/bookingDetail/${idValue}`)
             .then((response) => {
                 console.log(response.data);
                 setUser(response.data);
