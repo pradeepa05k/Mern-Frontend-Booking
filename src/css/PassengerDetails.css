@@ -51,14 +51,16 @@ i {
     line-height: 200px;
     margin-left:-15px;
 }
+}
 .card {
-    background: white;
-    padding: 60px;
+    background: #fff;
     display: inline-block;
     margin: 20px auto;
     text-align: center;
+    margin-left: 30%;
     padding: 40px 0;
-    background: #EBF0F5;
+    background: #ebf0f5;
+    width: 500px;
 }
 button a{
     text-decoration: none;
