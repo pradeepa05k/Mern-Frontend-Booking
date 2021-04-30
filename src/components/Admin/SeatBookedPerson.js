@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams } from "react-router";
 
-export default function SeatBookedPerson() {
+export default function SeatBookedPerson(props) {
     const [user, setUser] = useState([]);
     let {id} = useParams();
 
@@ -17,7 +17,7 @@ export default function SeatBookedPerson() {
             })
         };
         fetch();
-    },[])
+    },[props])
 
     return (
         <div>
