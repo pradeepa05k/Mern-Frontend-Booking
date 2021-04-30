@@ -25,7 +25,6 @@ class AdminLogin extends Component {
         })
     }
     submit(event){
-        console.log("submiting");
         event.preventDefault(); 
         const registered = {
             email : this.state.email,
@@ -35,7 +34,7 @@ class AdminLogin extends Component {
         axios.post("https://book-your-ticket.herokuapp.com/login", registered)
         .then((response) => {
             if(response ) {
-                if(response.data != "Invalid email or password"){
+                if(response.data !== "Invalid email or password"){
                     console.log(response);
                     if(this.state.email==="admin@gmail.com" && this.state.password==="admin111")
                     {

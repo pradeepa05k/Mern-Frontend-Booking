@@ -9,12 +9,14 @@ export default function SeatBookedPerson() {
 
 
     useEffect(() => {
-        console.log("Coming");
-        axios.get(`https://book-your-ticket.herokuapp.com/bookingDetail/${id}`)
-        .then((response) => {
-            console.log(response.data);
-            setUser(response.data);
-        })
+        const fetch = () => {
+            axios.get(`https://book-your-ticket.herokuapp.com/bookingDetail/${id}`)
+            .then((response) => {
+                console.log(response.data);
+                setUser(response.data);
+            })
+        };
+        fetch();
     },[])
 
     return (

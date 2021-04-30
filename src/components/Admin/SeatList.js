@@ -21,14 +21,14 @@ export default function SeatList() {
             <h2>View Seats</h2>
               {
               seat.map((value) => {
-                  if(value.seatStatus=="open"){
+                  if(value.seatStatus==="open"){
                     return(
                         <button className="bg-green dib ma2 pa3" style={{ padding: "5px", width: "50px"}}><a href={`/bookseat/${value._id}`}>{value.seatNo}</a></button>
                     );
                   }
                   else{
                     return(
-                        <button className="bg-red dib ma2 pa3" style={{ padding: "5px", width: "50px"}}><a href={`/bookingDetail/${value._id}`}>{value.seatNo}</a></button>
+                        <button className="bg-red dib ma2 pa3" style={{ padding: "5px", width: "50px"}}><a href={`/bookedPassenger/${value._id}`}>{value.seatNo}</a></button>
                     );
                   }
               })}

@@ -37,7 +37,7 @@ class App extends Component{
                     <Route path="/login" component={AdminLogin}></Route>
                     <Route path="/payment" component={Payment}></Route>
                     <Route path="/success" component={Success}></Route>
-                    <Route path="/bookingDetail/:id" component={SeatBookedPerson}></Route>
+                    <Route path="/bookedPassenger/:id" component={SeatBookedPerson}></Route>
                 </Switch>
             </Router>
         );

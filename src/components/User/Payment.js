@@ -56,7 +56,7 @@ class Payment extends React.Component{
                         </div>
                     </div>
                     <div className="form-group">
-                        <h2 style={{marginLeft:0}, {padding:'10px'}}>Amount : Rs.700</h2>
+                        <h2 style={{marginLeft:0, padding:'10px'}}>Amount : Rs.700</h2>
                     </div>
                     <button className="btn btn-primary" type="submit"><a href="/success">Pay Now</a></button>
                 </form>

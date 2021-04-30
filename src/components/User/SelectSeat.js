@@ -20,7 +20,7 @@ export default function SelectSeat() {
             <h2>View Seats</h2>
               {
               seat.map((value) => {
-                  if(value.seatStatus=="open"){
+                  if(value.seatStatus==="open"){
                     return(
                         <button className="bg-green dib ma2 pa3" style={{ padding: "5px", width: "50px"}}><a href={`/bookseat/${value._id}`}>{value.seatNo}</a></button>
                     );
