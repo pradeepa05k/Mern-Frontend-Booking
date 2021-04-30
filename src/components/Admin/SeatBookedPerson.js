@@ -6,7 +6,6 @@ import { useParams } from "react-router";
 export default function SeatBookedPerson(props) {
     const [user, setUser] = useState([]);
     let {id} = useParams();
-    const { fetch } = props;
 
 
     useEffect(() => {
@@ -18,7 +17,7 @@ export default function SeatBookedPerson(props) {
             })
         };
         fetch();
-    },[fetch])
+    },[props])
 
     return (
         <div>
