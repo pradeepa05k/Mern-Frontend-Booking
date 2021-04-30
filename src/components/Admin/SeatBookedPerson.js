@@ -6,19 +6,19 @@ import { useParams } from "react-router";
 export default function SeatBookedPerson(props) {
     const [user, setUser] = useState([]);
     let {id} = useParams();
+    const { fetch } = props;
 
 
     useEffect(() => {
         const fetch = () => {
-            const idValue = id ? {id} : {}
-            axios.get(`https://book-your-ticket.herokuapp.com/bookingDetail/${idValue}`)
+            axios.get(`https://book-your-ticket.herokuapp.com/bookingDetail/${id}`)
             .then((response) => {
                 console.log(response.data);
                 setUser(response.data);
             })
         };
         fetch();
-    },[props,user])
+    },[fetch])
 
     return (
         <div>
