@@ -34,4 +34,9 @@ export default function SelectSeat() {
             </div>
           );
     }
+    else{
+      return(
+        <div></div>
+      )
+    }
 }

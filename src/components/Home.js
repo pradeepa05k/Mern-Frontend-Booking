@@ -6,9 +6,9 @@ const Home = () => {
         <div className="home">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/login">Logout</a></li> 
+                <li style={{float:'right'}}><a href="/register">Register</a></li>
+                <li style={{float:'right'}}><a href="/login">Login</a></li>
+                <li><a href="/selectSeat">Select Seat</a></li> 
             </ul> 
             <br/><br/>
             <h1>Welcome to Online Bus Ticket Booking</h1> 

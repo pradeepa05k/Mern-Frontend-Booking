@@ -9,16 +9,16 @@ class Payment extends React.Component{
                 <form>                
                     <div className="form-group">
                         <label htmlFor="inputNumber">Card Number</label>
-                        <input type="text" className="form-control" id="inputNumber" placeholder="Enter Your Card Number"/>
+                        <input type="text" className="form-control" id="inputNumber" placeholder="Enter Your Card Number" required/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="inputName">Name on card</label>
-                        <input type="text" className="form-control" id="inputName" placeholder="Enter Your name on Card"/>
+                        <input type="text" className="form-control" id="inputName" placeholder="Enter Your name on Card" required/>
                     </div>
                     <div className="form-row">
                         <div className="form-group col-md-2">
                             <label htmlFor="inputMonth">Expiry Month</label>
-                            <select id="inputMonth" className="form-control">
+                            <select id="inputMonth" className="form-control"  required>
                                 <option>Jan</option>
                                 <option>Feb</option>
                                 <option>Mar</option>
@@ -35,7 +35,7 @@ class Payment extends React.Component{
                         </div>
                         <div className="form-group col-md-2">
                             <label htmlFor="inputYear">Expiry Year</label>
-                            <select id="inputYear" className="form-control">
+                            <select id="inputYear" className="form-control"  required>
                                 <option>2020</option>
                                 <option>2021</option>
                                 <option>2022</option>
@@ -52,7 +52,7 @@ class Payment extends React.Component{
                         </div>
                         <div className="form-group col-md-2">
                             <label htmlFor="inputCvv">Card CVV</label>
-                            <input type="text" className="form-control" id="inputCvv"/>
+                            <input type="text" className="form-control" id="inputCvv"  required/>
                         </div>
                     </div>
                     <div className="form-group">

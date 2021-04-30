@@ -1,13 +1,12 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams } from "react-router";
 
 export default function SeatBookedPerson(props) {
     const [user, setUser] = useState([]);
     let {id} = useParams();
-
-
+    
     useEffect(() => {
         const fetch = () => {
             axios.get(`https://book-your-ticket.herokuapp.com/bookingDetail/${id}`)
@@ -32,7 +31,7 @@ export default function SeatBookedPerson(props) {
                             </div>
                             <div className="row">
                                 <h6 className="col">Age</h6>
-                                <p className="col">{value.age} </p>
+                                <p className="col" >{value.age} </p>
                             </div>
                             <div className="row">
                                 <h6 className="col">Mobile Number</h6>
